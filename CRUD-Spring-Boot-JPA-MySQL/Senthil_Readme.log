@@ -1,0 +1,21 @@
+Reference link : https://www.javaguides.net/2018/09/spring-boot-2-jpa-mysql-crud-example.html
+
+
+##Pull MYSQL 5.1 container from internet 
+
+Example :
+
+docker pull grugnog/mysql-5.1:latest
+
+### Set password and run that image 
+
+
+docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password grugnog/mysql-5.1:latest
+
+###Connect to that MYSQL DB using below command
+
+docker exec -it 9f05aeb906ee mysql -uroot -p
+
+OR
+
+docker exec -it 9f05aeb906ee mysql -uroot -ppassword
