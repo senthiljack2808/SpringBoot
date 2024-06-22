@@ -10,7 +10,8 @@ public class SpringBootDay2Application {
     public static void main(String[] args) {
         
         ApplicationContext context=SpringApplication.run(SpringBootDay2Application.class, args);
-        context.getBean("springboot");
+        Programmer programmer=context.getBean(Programmer.class);
+        programmer.code();
         
     }
 
