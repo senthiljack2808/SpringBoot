@@ -4,7 +4,7 @@
 * @Component - will create bean in Ioc container for that class
 * @Autowired - will create wiring b/w two classes 
 	Example : 
-	Laptop cannot run with CPU 
+	Laptop cannot run without CPU 
 
 	class Laptop{
 
