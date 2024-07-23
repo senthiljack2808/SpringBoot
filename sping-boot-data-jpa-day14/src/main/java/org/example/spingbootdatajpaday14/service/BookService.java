@@ -4,7 +4,6 @@ import java.util.List;
 import org.example.spingbootdatajpaday14.model.Book;
 import org.example.spingbootdatajpaday14.repo.BookRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -25,5 +24,9 @@ public class BookService {
 
     public void updateBook(Book book) {
         repo.save(book);
+    }
+
+    public List<Book> getBooksByKeyword(String keyword) {
+        return repo.findByAuthorContaining(keyword);
     }
 }

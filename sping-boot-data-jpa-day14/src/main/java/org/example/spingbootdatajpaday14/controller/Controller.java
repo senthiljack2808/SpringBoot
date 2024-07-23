@@ -28,6 +28,11 @@ public class Controller {
         return service.getAllBooks();
     }
     
+    @GetMapping("/books/{keyword}")
+    public List<Book> getBooksByKeyword(@PathVariable String keyword)
+    {
+        return service.getBooksByKeyword(keyword);
+    }    
     @PostMapping("/book")
     public void addBookToDb(@RequestBody Book book) 
     {
@@ -46,6 +51,8 @@ public class Controller {
     {
         service.updateBook(book);
     }
+    
+    
     
     
     
